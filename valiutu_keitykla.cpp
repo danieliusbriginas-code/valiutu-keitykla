@@ -67,7 +67,17 @@ int main() {
                 cout << "1 EUR = " << pirkti << " " << vardas << " (pirkimas)\n";
                 cout << "1 EUR = " << parduoti << " " << vardas << " (pardavimas)\n";
             } else {
-                cout << "Si funkcija dar nepadaryta.\n";
+                double suma;
+                cout << "Iveskite suma: ";
+                cin >> suma;
+
+                if (suma <= 0) {
+                    cout << "Klaida: suma turi buti teigiama!\n";
+                } else if (veiksmas == 2) {
+                    cout << suma << " EUR = " << suma * pirkti << " " << vardas << "\n";
+                } else {
+                    cout << suma << " " << vardas << " = " << suma / parduoti << " EUR\n";
+                }
             }
         }
     }
